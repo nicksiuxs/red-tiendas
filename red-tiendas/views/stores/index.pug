@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+    a(href='/stores/create') Nueva tienda
+    br
+    br
+    table.table
+        thead
+            tr
+            th(scope='col') #
+            th(scope='col') Nombre
+            th(scope='col') Tipo
+            th(scope='col') Ubicación
+
+        tbody
+            each store in stores
+                tr
+                  th(scope='row')
+                     = store.id
+                  td= store.nombre
+                  td= store.tipo
+                  td= store.ubicacion
